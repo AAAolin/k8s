@@ -189,3 +189,13 @@ func (s ingressCell) GetCreateTime() time.Time {
 func (s ingressCell) GetName() string {
 	return s.Name
 }
+
+type pvCell corev1.PersistentVolume
+
+func (p pvCell) GetCreateTime() time.Time {
+	return p.CreationTimestamp.Time
+}
+
+func (p pvCell) GetName() string {
+	return p.Name
+}

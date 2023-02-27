@@ -63,6 +63,10 @@ func (r *router) InitApiRouter(e *gin.Engine) {
 		GET("/api/k8s/workflows", Workflow.GetList).
 		GET("/api/k8s/workflow/detail", Workflow.GetById).
 		POST("/api/k8s/workflow/create", Workflow.Add).
-		DELETE("/api/k8s/workflow/del", Workflow.DelById)
+		DELETE("/api/k8s/workflow/del", Workflow.DelById).
+		// PV
+		GET("/api/k8s/pv", PV.GetPVList).
+		GET("/api/k8s/pv/detail", PV.GetPVDetail).
+		DELETE("/api/k8s/pv/del", PV.DeletePV)
 
 }
