@@ -34,8 +34,8 @@ func (p *pv) GetPVList(filterName string, page, limit int) (*pvRes, error) {
 		},
 	}
 	filtered := dataSelector.Filter()
-	data := filtered.Sort().Paginate()
 	total := len(filtered.GenericDataList)
+	data := filtered.Sort().Paginate()
 
 	return &pvRes{
 		Items: p.toCorev1PV(data.GenericDataList),

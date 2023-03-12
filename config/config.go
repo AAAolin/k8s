@@ -4,7 +4,8 @@ import "time"
 
 const (
 	ListenAddr = "0.0.0.0:9091"
-	KubeConfig = "D:\\GoProject\\k8s\\config\\config"
+	//KubeConfig = "D:\\GoProject\\k8s\\config\\config"
+	KubeConfig = "/root/.kube/config"
 	LogsLimit  = 2000
 
 	Username = "admin"
